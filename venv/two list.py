@@ -11,7 +11,7 @@ def sum_list(a,b):
             q=a[z]+b[z]
             lstC.append(q)
         del lstC[0]
-        print(lstC)
+        print("the result of this addition is:",lstC)
     else:
         for i in range(1,len(a)-len(b)):
             b.append(0)
@@ -19,13 +19,14 @@ def sum_list(a,b):
         for z in range(0,len(a)):
             q = a[z] + b[z]
             lstC.append(q)
-        print(lstC)
-    del lstC[0]
+        print("the result of this addition",lstC)
     return lstC
 
-def mul_list(c,lst):
+def mul_list(lst):
+    print("please enter a number as the multiplier:")
+    c=int(input())
     lstD=[]
-    for k in range(len(lst)):
+    for k in range(0,len(lst)):
         lst[k]=lst[k]*c
         lstD.append(lst[k])
     print(lstD)
@@ -48,8 +49,5 @@ while y.isdigit():
     y=input()
 else:
     print("you have enter a character, the loop now break")
-
-sum_list(lstA,lstB)
-list=sum_list(lstA,lstB)
-mul_list(3,list)
+mul_list(sum_list(lstA,lstB))
 
