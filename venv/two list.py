@@ -4,21 +4,20 @@ def sum_list(a,b):
     i=1
     z=0
     if len(a)<=len(b):
-        for i in range(0,len(b)-len(a)):
+        for i in range(len(b)-len(a)):
             a.append(0)
-            i+=1
-        for z in range (0,len(b)):
+        for z in range(len(b)):
             q=a[z]+b[z]
             lstC.append(q)
         del lstC[0]
         print("the result of this addition is:",lstC)
     else:
-        for i in range(1,len(a)-len(b)):
+        for i in range(len(a)-len(b)):
             b.append(0)
-            i+=1
-        for z in range(0,len(a)):
+        for z in range(len(a)):
             q = a[z] + b[z]
             lstC.append(q)
+        del lstC[0]
         print("the result of this addition",lstC)
     return lstC
 
@@ -29,7 +28,7 @@ def mul_list(lst):
     for k in range(0,len(lst)):
         lst[k]=lst[k]*c
         lstD.append(lst[k])
-    print(lstD)
+    print("the result of the calculation is:",lstD)
     return lstD
 
 
