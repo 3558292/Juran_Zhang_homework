@@ -17,7 +17,7 @@ def input_player():
             if lst[j]>lst[j+1]:
                 lst[j],lst[j+1]=lst[j+1],lst[j]
     for b in lst:
-        print("the player with the number of",b,"'s rating is",jersey_player[b])
+        print("the player with the number of",b,"'s rating number is",jersey_player[b])
 
 
 input_player()
