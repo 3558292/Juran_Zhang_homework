@@ -5,7 +5,6 @@ def check():
     while x>=0:
         x=int(input())
         lst.append(x)
-    a=str(x)
     print("please enter a number")
     y=int(input())
     for i in range(0,len(lst)):

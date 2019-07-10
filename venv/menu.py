@@ -8,6 +8,13 @@ def output_menu():
     print("Q-Quit")
 
 
+def st(x):
+    for i in range(len(x)):
+        for j in range(len(x)-1-i):
+            if x[j]>x[j+1]:
+                x[j],x[j+1]=x[j+1],x[j]
+    return x
+
 def input_player():
     jersey_player={}
     jersey_number = int(input("please enter the number of the player"))
@@ -22,6 +29,7 @@ def input_player():
     print(jersey_player)
     for i in jersey_player:
         lst.append(i)
+    st(lst)
     for b in lst:
         print("the player with the number of",b,"'s rating number is",jersey_player[b])
 

@@ -1,3 +1,11 @@
+def st(x):
+    for i in range(len(x)):
+        for j in range(len(x)-1-i):
+            if x[j]>x[j+1]:
+                x[j],x[j+1]=x[j+1],x[j]
+    return x
+
+
 def input_player():
     jersey_player={}
     jersey_number = int(input("please enter the number of the player"))
@@ -12,10 +20,7 @@ def input_player():
     print(jersey_player)
     for i in jersey_player:
         lst.append(i)
-    for a in range(len(lst)):
-        for j in range(len(lst)-1-a):
-            if lst[j]>lst[j+1]:
-                lst[j],lst[j+1]=lst[j+1],lst[j]
+    st(lst)
     for b in lst:
         print("the player with the number of",b,"'s rating number is",jersey_player[b])
 

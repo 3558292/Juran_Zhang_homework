@@ -1,0 +1,11 @@
+days={
+    1:"Monday",
+    2:"Tuesday",
+    3:"Wed",
+    4:"Thursday",
+    5:"Friday",
+    6:"Sat",
+    7:"Sun",
+}
+i=int(input())
+print(days[i])
