@@ -3,7 +3,6 @@ def output_menu():
     print("A-Add players")
     print("D-Remove players")
     print("U-update player rating")
-    print("R-Output players above a rating")
     print("O-Output roster")
     print("Q-Quit")
 
@@ -51,7 +50,7 @@ def update_player(x):
         print("please enter the new rating number")
         b=int(input())
         if 0<b<10:
-            x[eval(a)]=eval(b)
+            x[a]=b
             print(x)
         else:
             print("you have enter a number that is out of range, please try again")
@@ -83,8 +82,6 @@ if x=="a":
         add_player(dictionary)
 elif x=="d":
         delete_player(dictionary)
-elif x=="r":
-    delete_player(dictionary)
 elif x=="o":
     print(dictionary)
 elif x=="q":
