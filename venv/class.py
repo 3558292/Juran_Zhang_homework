@@ -1,4 +1,5 @@
 class student:
+    lst=[]
     def __init__(self):
         self.name=""
         self.age=int(0)
@@ -7,6 +8,27 @@ class student:
         self.gra_day=0
         self.gra_month=0
         self.gra_year=0
+
+    def __str__(self,other):
+        return '%02d student name is %s, his/her age is %02d, and the GPA is' % (self.name,self.age,self.GPA)
+
+    def __eq__(self,other):
+        if self.name ==other.name:
+            return True
+        else:
+            return False
+
+    def __lt__(self, other):
+        if self.GPA<other.GPA:
+            return True
+        else:
+            return False
+
+    def __gt__(self,other):
+        if self.GPA >other.GPA:
+            return True
+        else:
+            return False
 
     def read_from_keyboard(self):
         x=0
@@ -43,15 +65,29 @@ class student:
     def print_student(self):
         print("student's name:",self.name)
         print("student's age:",self.age)
-        print("graduation day",self.gra_day)
-        print("graduation month", self.gra_month)
-        print("graduation year", self.gra_year)
+        print("graduation day:",self.gra_day)
+        print("graduation month:", self.gra_month)
+        if self.gra_year<0:
+            print("graduation year:", self.gra_year*-1,"B.C.")
+        else:
+            print("graduation year:",self.gra_year,"A.D.")
         del self.grade_list[len(self.grade_list)-1]
         print("grade list",self.grade_list)
         print("GPA is",self.GPA)
 
 
-study=student()
-study.read_from_keyboard()
-study.find_GPA()
-study.print_student()
+def get_all():
+    student.lst=[]
+    for a in range (2):
+        s1=student()
+        s1.read_from_keyboard()
+        s1.find_GPA()
+        student.lst.append(s1)
+
+
+get_all()
+for i in student.lst:
+    i.print_student()
+
+
+
