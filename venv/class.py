@@ -62,7 +62,7 @@ class student:
         self.GPA=y/(i+1)
         print("the student's GPA is:",self.GPA)
 
-    def print_student(self):
+    def print_student(self,):
         print("student's name:",self.name)
         print("student's age:",self.age)
         print("graduation day:",self.gra_day)
@@ -88,6 +88,9 @@ def get_all():
 get_all()
 for i in student.lst:
     i.print_student()
+s1=student.lst[0]
+s2=student.lst[1]
+print(s1==s2)
 
 
 
