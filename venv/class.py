@@ -9,8 +9,8 @@ class student:
         self.gra_month=0
         self.gra_year=0
 
-    def __str__(self,other):
-        return '%02d student name is %s, his/her age is %02d, and the GPA is' % (self.name,self.age,self.GPA)
+    def __str__(self):
+        return ' student name is %s, his/her age is %02d, and the GPA is %s' % (self.name,self.age,self.GPA)
 
     def __eq__(self,other):
         if self.name ==other.name:
@@ -33,19 +33,26 @@ class student:
     def read_from_keyboard(self):
         x=0
         self.name=input("please enter the student's name")
-        self.age=int(input("pease enter the student's age"))
-        while self.age<=0:
-            print("invalid number, please try again")
-            self.age=int(input())
-        self.gra_day = int(input("pease enter the student's graduation day"))
-        while self.gra_day<=0 or self.gra_day>31:
-            print("invalid number, please try again")
-            self.gra_day=int(input())
-        self.gra_month = int(input("please enter the student's graduation month"))
-        while self.gra_month<=0 or self.gra_month>12:
-            print("invalid number, please try again")
-            self.gra_month=int(input())
-        self.gra_year = int(input("please enter the student's graduation year"))
+        try:
+            self.age=int(input("pease enter the student's age"))
+        except:
+                print("invalid value, please try again")
+                self.age=int(input())
+        try:
+            self.gra_day = int(input("pease enter the graduation day"))
+        except:
+            print("invalid value, please try again")
+            self.gra_day = int(input())
+        try:
+            self.gra_month = int(input("pease enter the graduation month"))
+        except:
+            print("invalid value, please try again")
+            self.gra_month = int(input())
+        try:
+            self.gra_year = int(input("pease enter the graduation year"))
+        except:
+            print("invalid value, please try again")
+            self.gra_year = int(input())
         print("please enter numbers fot the student's grade")
         while x>=0:
             x=int(input())
@@ -86,11 +93,17 @@ def get_all():
 
 
 get_all()
-for i in student.lst:
-    i.print_student()
+
 s1=student.lst[0]
 s2=student.lst[1]
-print(s1==s2)
+
+for i in student.lst:
+    if s1 == s2:
+        del student.lst[0]
+        print(" the two students are the same, please enter another one")
+    i.print_student()
+
+
 
 
 
