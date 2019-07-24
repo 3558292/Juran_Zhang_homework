@@ -1,18 +1,30 @@
 ---------------------------------------------                    
 | EMPLOYEE INFO:                          ||                    
 | First Name: John                        ||                    
-| Last Name: Smith                        ||                     
+| Last Name: A                            ||                     
 | ID: 12345                               ||                    
 | Received Payment: $1120.00              ||                    
 ---------------------------------------------                    
 | EMPLOYEE INFO:                          ||                    
 | First Name: Julia                       ||                    
-| Last Name: Zhang                        ||                     
+| Last Name: B                            ||                     
 | ID: 3424                                ||                    
 | Received Payment: $1904.00              ||                    
 ---------------------------------------------                    
 | EMPLOYEE INFO:                          ||                    
 | First Name: Ella                        ||                    
-| Last Name: Xiao                         ||                     
+| Last Name: C                            ||                     
 | ID: 34                                  ||                    
 | Received Payment: $1190.00              ||                    
+---------------------------------------------                    
+| EMPLOYEE INFO:                          ||                    
+| First Name: Luka                        ||                    
+| Last Name: H                            ||                     
+| ID: 45                                  ||                    
+| Received Payment: $23.00                ||                    
+---------------------------------------------                    
+| EMPLOYEE INFO:                          ||                    
+| First Name: Saber                       ||                    
+| Last Name: Z                            ||                     
+| ID: 5                                   ||                    
+| Received Payment: $782.00               ||                    
